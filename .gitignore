@@ -132,7 +132,7 @@ dist
 server/package-lock.json
 server/node_modules
 client/package-lock.json
-
+server/config/default.json
 # Ignore all nodemon files
 nodemon.*
 
