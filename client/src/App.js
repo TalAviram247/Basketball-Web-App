@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 
-function App() {
+import CreatePlayer from './components/CreatePlayer';
+import ShowPlayerList from './components/ShowPlayerList';
+import ShowPlayerDetails from './components/ShowPlayerDetails';
+import UpdatePlayerInfo from './components/UpdatePlayerInfo';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route exact path='/' element={<ShowPlayerList />} />
+          <Route path='/create-player' element={<CreatePlayer />} />
+          <Route path='/edit-player/:id' element={<UpdatePlayerInfo />} />
+          <Route path='/show-player/:id' element={<ShowPlayerDetails />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
