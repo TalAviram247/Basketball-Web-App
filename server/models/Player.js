@@ -10,15 +10,15 @@ const PlayerSchema = new mongoose.Schema({
     required: true
   },
   points_avg: {
-    type: Float,
+    type: Number,
     required: true
   },
   assists_avg: {
-    type: Float,
+    type: Number,
     required: true
   },
   rebounds_avg: {
-    type: Float,
+    type: Number,
     required: true
   },
   

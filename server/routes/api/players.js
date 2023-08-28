@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 // Load Player model
-const Player = require('../../models/Players');
+const Player = require('../../models/Player');
 
 // @route GET api/players/test
 // @description tests players route
